@@ -4,6 +4,13 @@
   <artifactId>MyProjectSample</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <properties>
+ 
+					<maven.compiler.target>1.8</maven.compiler.target> 
+					<maven.compiler.source>1.8</maven.compiler.source>
+ 
+  </properties>
+  
   <dependencies>
   	<!-- https://mvnrepository.com/artifact/junit/junit -->
   	<dependency>
@@ -16,4 +23,44 @@
   	</dependency>
   	
   </dependencies>
+  
+
+  	<build>
+ 
+		<finalName>my-calculator</finalName>
+ 
+		<plugins>
+ 
+			<plugin>
+ 
+				<groupId>org.apache.maven.plugins</groupId>
+				 
+			
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				
+				
+				 
+	 			<configuration>
+ 
+					<archive>
+ 
+						<manifest>
+ 
+							<addClasspath>true</addClasspath>
+	 
+							<classpathPrefix>lib</classpathPrefix>
+							 
+							<mainClass>MyPack1.MyCalc</mainClass>
+ 
+						</manifest>
+ 
+					</archive>
+ 
+				</configuration>
+			</plugin>
+		</plugins>
+ 
+ 	</build>
+		
 </project>
